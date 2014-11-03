@@ -1,0 +1,11 @@
+= button_to '<< К списку игор', start_path, :class=>'btn btn-primary'
+/=binding.pry
+div align="center" 
+  object height="#{@height}" width="#{@width}" 
+    param name="movie" value=""
+      param name="quality" value="high" 
+        embed height="#{@height}" width="#{@width}" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src='#{@game.flash.url}' type="application/x-shockwave-flash" 
+hr
+/= link_to '<< К списку игор', start_path, :class=>'btn btn-primary'
+        
+

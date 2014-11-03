@@ -1,0 +1,8 @@
+= simple_form_for @profile, :remote => true, :html => { :class => "form-horizontal" } do |f|
+  = f.input :flash_size, label: 'Высота окна'
+  = f.input :flash_width, label: 'Ширина окна'
+  = f.input :active
+  .form-actions
+    = f.button :submit, 'Сохранить настройки',:class => 'btn-primary'
+    '
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn'

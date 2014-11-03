@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141101222820) do
+ActiveRecord::Schema.define(version: 20141103232340) do
+
+  create_table "games", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "flash_file_name"
+    t.string   "flash_content_type"
+    t.integer  "flash_file_size"
+    t.datetime "flash_updated_at"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.integer  "flash_size"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "flash_width"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

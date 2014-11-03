@@ -17,6 +17,12 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
+gem 'twitter-bootstrap-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'bootstrap-typeahead-rails'
+gem 'less-rails'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]

@@ -1,0 +1,19 @@
+- @games.each_slice(4) do |slice|
+  hr
+  .row-fluid
+    - slice.each do |game|
+      .span3
+        div.alert.alert-success.page-header
+          h3 
+            strong = game.title 
+        div.well style='' align="center"
+          hr
+          a href="/games/#{game.id}" 
+            = image_tag("#{game.image.url}", :class=>"img-polaroid")
+          hr
+          = button_to 'Играть', "/games/#{game.id}",method: :get,  :class=> 'btn btn-primary'
+          /div.thumbnail
+            /.well
+            /= link_to image_tag("#{game.image.url}"), {:action => 'show', :controller => 'games', :id=>game}              
+            /p 
+              = game.description

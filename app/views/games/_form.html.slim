@@ -1,0 +1,10 @@
+= simple_form_for @game, :html => { :class => "form-horizontal" } do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :active
+  = f.input :image, as: :file
+  = f.input :flash, as: :file
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    '
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), games_path, :class => 'btn'
